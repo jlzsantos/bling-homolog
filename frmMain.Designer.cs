@@ -324,6 +324,7 @@
             Controls.Add(txtReq2);
             Controls.Add(txtReq1);
             Controls.Add(txtApiBaseUrl);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
