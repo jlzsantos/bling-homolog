@@ -28,10 +28,7 @@ namespace AppHomolog
         }
 
         private void InitiateForm()
-        {
-            txtClientId.Text = "a728e2741017a05b2399acd94c532041559b6c5d";
-            txtClientSecret.Text = "961c60aa246519d68a40c2b15b5c10ad78017216f30e04eb64b815f3d935";
-            
+        {            
             txtReq1.ReadOnly = true;
             txtReq2.ReadOnly = true;
             txtReq3.ReadOnly = true;
@@ -48,24 +45,42 @@ namespace AppHomolog
             if (string.IsNullOrWhiteSpace(txtBaseUrl.Text))
             {
                 MessageBox.Show("Informe a url base para obtenção de novo token.", "Bling Homolog");
+                txtBaseUrl.Focus();
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtApiBaseUrl.Text))
             {
                 MessageBox.Show("Informe a url base para os endpoints da api.", "Bling Homolog");
+                txtApiBaseUrl.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtClientId.Text))
+            {
+                MessageBox.Show("Informe o client id.", "Bling Homolog");
+                txtClientId.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtClientSecret.Text))
+            {
+                MessageBox.Show("Informe o client secret.", "Bling Homolog");
+                txtClientSecret.Focus();
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtToken.Text))
             {
                 MessageBox.Show("Informe o token atual.", "Bling Homolog");
+                txtToken.Focus();
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtRefreshToken.Text))
             {
                 MessageBox.Show("Informe o refresh token atual.", "Bling Homolog");
+                txtRefreshToken.Focus();
                 return false;
             }
 
